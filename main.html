@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aditya's webpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(0, 0, 40);
+        color: white;
+        font-family: "poppins", sans-serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(17, 13, 132);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+      nav ul li a {
+        list-style: none;
+        text-decoration: none;
+        color: white;
+        transition: all 0.3s;
+      }
+      nav ul li a:hover {
+        color: rgb(173, 77, 109);
+        font-size: 1.2rem;
+        transition: all 0.4s;
+      }
+
+      .left {
+        color: grey;
+      }
+      .firstsection {
+        display: flex;
+        justify-content: space-around;
+        margin: 80px 0;
+      }
+
+      .firstsection > {
+        width: 30%;
+      }
+
+      .leftsection {
+        font-size: 2.5rem;
+        margin: 50px 0;
+        margin-left: 10%;
+      }
+      .leftsection .btn{
+        padding:12px;
+        border: 2px solid rgb(208, 203, 227);
+        background-color: rgb(20, 20, 54);
+        color: white;
+        border-radius:12px;
+        
+      }
+      .btn:hover{
+        padding: 13px;
+        border: 2px solid rgb(73, 196, 223);
+        background-color: rgb(27, 27, 223);
+        color: rgb(0, 166, 255);
+        border-radius:12px;
+        transition:0.7s;
+        
+      }
+      .rightsection {
+        width: 80%;
+        margin: 50px 0;
+        margin-left: 100px;
+      }
+      .purple {
+        color: rgb(90, 13, 183);
+      }
+      #element {
+        color: rgb(90, 13, 183);
+      }
+      main hr {
+        border: 0;
+        background: rgb(214, 178, 255);
+        height: 1.2px;
+        margin: 40px 1vw;
+      }
+      h1 {
+        margin-left: 10%;
+        text-shadow: 2px 2px blue blur;
+      }
+      
+      .textgray {
+        color: grey;
+        margin-left: 10%;
+      }
+      .about {
+        padding: 80px 0;
+        color: aliceblue;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .aboutcol1 {
+        flex-basis: 35%;
+      }
+      .aboutcol2 {
+        flex-basis: 60%;
+      }
+      .aboutcol1 img {
+        width: 180px;
+        height: 200px;
+        border-radius: 15px;
+        margin-left: 15%;
+        margin-top: 20px;
+      }
+      .aboutcol2 p {
+        font-size: 11px;
+        text-shadow: 2px 2px rgb(100, 100, 248);
+        margin-top: 20px;
+        margin-right: 10%;
+      }
+      hr {
+        border: 0;
+        background: rgb(214, 178, 255);
+        height: 1.2px;
+        margin: 20px 1vw;
+      }
+      .services {
+        text-align: center;
+        margin: 30px;
+      }
+
+      .services-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+        align-items: center;
+        gap: 2.3rem;
+        margin-top: 4.2rem;
+        margin-left: 20px;
+      }
+      .box {
+        padding: 80px 40px 66px;
+        background: #28354a;
+        border-radius: 28px;
+        border: 2px solid rgb(58, 4, 208);
+        box-shadow: 0 0 5px var(rgb(47, 47, 99));
+        transition: all 0.7s ease;
+        cursor: context-menu;
+        height: 300px;
+        width: 200px;
+      }
+      .box img {
+        margin-bottom: 20px;
+      }
+      .box h3 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .box p {
+        font-size: var(--p-font);
+        font-weight: 400;
+        color: var(--other-color);
+        line-height: 30px;
+        margin-bottom: 20px;
+      }
+      .box a {
+        display: inline-block;
+        font-size: 22px;
+        line-height: 1.273em;
+        font-weight: 700;
+        padding: 7px 0;
+        color: var(--text-color);
+        border-bottom: 2px solid #5d6c83;
+        transition: all 0.5s ease;
+      }
+      .box i {
+        vertical-align: middle;
+        font-size: 25px;
+        color: var(--main-color);
+        margin-left: 5px;
+      }
+      .box a:hover {
+        border-bottom: 2px solid var(rgb(120, 120, 174));
+      }
+      .box:hover {
+        border: 1px solid var(rgb(120, 120, 174));
+        transform: translateY(-5px) scale(1.04);
+        background-color: rgb(20, 20, 200);
+        border: 2px solid white;
+      }
+      .abc {
+        text-align: center;
+        color: rgba(192, 143, 255, 0.753);
+      }
+      .efg {
+        border-radius: 50%;
+        height: 300px;
+        float:right;
+        margin-right: 100px;
+        transition: 0.3s;
+      }
+      .ppf:hover {
+        width: 190px;
+        height: 210px;
+        border-radius: 15px solid blue;
+        margin-left: 15%;
+        margin-top: 20px;
+        border: 3px solid rgb(150, 173, 255);
+        transition: 0.3s;
+      }
+      .efg:hover {
+        border-radius: 50%;
+        height: 310px;
+        float: right;
+        margin-right: 100px;
+        border: 5px solid rgb(1, 88, 150);
+        transition: 0.3s;
+      }
+      footer{
+        height:40px;
+        background-color:blue;
+        text-align: center;
+        padding:10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Aditya's portfilio</div>
+        <div class="right">
+          <ul>
+            <li><a href="#services">services</a></li>
+            <li><a href="">projects</a></li>
+            <li><a href="http://127.0.0.1:3000/aditya's webpage(project)/contact.html">contact</a></li>
+            <li><a href="">home</a></li>
+            <li><a href="">About</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="firstsection">
+        <div class="leftsection">
+          <p>
+            Hi my name is
+
+            <span class="purple">Aditya</span>
+            and I am
+
+            <span id="element"></span>
+          </p>
+
+          <div class="buttons">
+            <button class="btn">Download resume</button>
+            <button class="btn">Git hub</button>
+          </div>
+        </div>
+
+        <div class="rightsection">
+          <img class="efg" src=".//frontpage.png.png" />
+
+          <!-- insert image -->
+        </div>
+      </section>
+
+      <hr />
+
+      <section>
+        <span class="textgray">What i have done so far</span>
+        <h1>About <span> Me</span></h1>
+      </section>
+
+      <div id="aboutme">
+        <div class="container">
+          <div class="row">
+            <div class="aboutcol1">
+              <img class="ppf" src="./profile pic.png" />
+            </div>
+            <div class="aboutcol2">
+              <h4>Information</h4>
+              <p>
+                I’m a passionate computer science student with a background in
+                physics, blending analytical thinking with creativity. My
+                journey includes exploring the intricacies of cybersecurity and
+                programming in C++, as well as capturing the world through
+                photography and traveling to fuel my curiosity and expand my
+                perspectives. With strong communication skills and a knack for
+                both logic and artistry, I bring a unique blend of skills to
+                every project I undertake.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <section class="services" id="services">
+        <div class="center-text" data-aos="fade-down">
+          <h2>My <span class="abc">Services</span></h2>
+        </div>
+        <div class="services-content" data-aos="zoom-in-up">
+          <div class="box">
+            <img src="./img/s-1.svg" alt="" />
+            <h3>Technical</h3>
+            <p>
+              Cybersecurity<br>
+              C++ programming
+              <br>
+              python programming
+              <br>
+              Editing(video & photos)
+            </p>
+            <a href="https://www.linkedin.com/in/aditya-kumar-singh-6003ba265/"
+              >Download Now
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+
+          <div class="box">
+            <img src="./img/s-2.svg" alt="" />
+            <h3>photography</h3>
+            <p>
+              macrography<br>
+              potraits<br>
+              cinimatic & landscape<br>
+              live photos<br>
+            </p>
+            <a href="https://www.instagram.com/aditya_k.singh24/"
+              >Download Now
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+
+          <div class="box">
+            <img src="./img/s-3.svg" alt="" />
+            <h3>Other Skills</h3>
+            <p>
+              Communication<br>
+              Table Tennis<br>
+              Writing Documentary 
+
+
+
+            </p>
+            <a href="#"
+              >Download Now
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Thank you</p>
+      &copy;All rights reserved Aditya 
+      
+    </footer>
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          " Photographer 📸",
+          "Traveller🚵‍♀️",
+          "sportsperson 🥇 ",
+          "computer science student 👻",
+        ],
+        typeSpeed: 50,
+      });
+    </script>
+  </body>
+</html>

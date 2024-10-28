@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <style>
+      body {
+        color: #faf6f6;
+        background-color: #1f0ccb;
+        margin: 0;
+      }
+      h1 {
+        text-align: center;
+        margin-top:50px;
+      }
+
+      .div1 {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .contact-form {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        background-color: #22609a;
+        border-radius: 8px;
+        box-shadow: 14px 19px 20px 5px rgb(0, 0, 0);
+      }
+
+      .contact-form h2 {
+        margin-top: 0;
+        font-size: 24px;
+        color: #faf6f6;
+        text-align: center;
+      }
+
+      .contact-form label {
+        display: block;
+        font-size: 14px;
+        color: #fdf8f8;
+        margin-top: 10px;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 2px solid #20b6e9;
+        border-radius: 4px;
+        font-size: 16px;
+        resize: vertical;
+        width: 90%;
+      }
+
+      .contact-form button {
+        width: 100%;
+        padding: 10px;
+        background-color: #3341da;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(0, 0, 40);
+        color: white;
+        font-family: "poppins", sans-serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(17, 13, 132);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+      nav ul li a {
+        list-style: none;
+        text-decoration: none;
+        color: white;
+        transition: all 0.3s;
+      }
+      nav ul li a:hover {
+        color: rgb(173, 77, 109);
+        font-size: 1.2rem;
+        transition: all 0.4s;
+      }
+
+      .contact-form button:hover {
+        background-color: #8283d5;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <nav>
+          <div class="left">Aditya's portfilio</div>
+          <div class="right">
+            <ul>
+              <li><a href="http://127.0.0.1:3000/aditya's webpage(project)/main.html">services</a></li>
+              <li><a href="">projects</a></li>
+              <li><a href="http://127.0.0.1:3000/aditya's webpage(project)/contact.html">contact</a></li>
+              <li><a href="http://127.0.0.1:3000/aditya's webpage(project)/main.html">home</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    
+      <h1>Welcome to Aditya's webpage</h1>
+    
+    <div class="div1">
+      <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form
+          action="mailto:kumar.adi7987@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
